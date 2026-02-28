@@ -1,0 +1,22 @@
+npm= node package manager 
+When we install node js which are files will come or download we call that as a module
+When we install npm which are files will come or download we call that as a package
+
+To install any packages we use "npm i packagename" to install particular version "npm i packagename@version"
+
+To uninstall any packages we use "npm uninstall packagename"
+
+dependencies-packages and packages ki dependencies
+dev dependencies-aise packages jo sirf devlopment mein kaam aayege par jab app ban jaayega aur upload ho jaayega tab hum in packages ko use nahi kar rahe honge
+
+npm start and test will be present ans we can use it directly "npm start" or npm test"
+if we want to use custom scripts then command will "npm run name"
+
+
+
+
+
+
+
+
+
