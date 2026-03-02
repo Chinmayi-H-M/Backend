@@ -14,7 +14,7 @@ const filteredArr=arr.filter(function(val){
 console.log(filteredArr);
 
 var obj={
-    name:"Shachin",
+    name:"Sachin",
     age:20
 }
 console.log(obj.name);
