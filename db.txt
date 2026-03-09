@@ -1,0 +1,5 @@
+Database -> Collections -> Document
+Code              Database
+mangoose.connect -> database create
+model create     -> Collection
+CREATE           -> Document
