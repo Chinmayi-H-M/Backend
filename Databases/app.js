@@ -21,7 +21,14 @@ app.get('/update',async (req,res)=>{
 })
 
 app.get('/read',async (req,res)=>{
-    let users =await userModel.find();
+    let users =await userModel.find();//TO READ ALL
+    let user =await userModel.findOne({name:'harsh'}); //find-will give u an array findone -will give u an object
     res.send(users);
+    res.send(user);
+})
+
+app.get('/delete',async (req,res)=>{
+    let deleteUser =await userModel.findOneAndDelete({name:harsh});
+    res.send(deleteUser);
 })
 app.listen(3000);
