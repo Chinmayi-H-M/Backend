@@ -28,13 +28,18 @@ app.post('/create', async (req,res)=>{
     });
     res.redirect('/read');
 })
-app.get('/edit/:id',async (req,res)=>{
+app.get('/edit/:user._id',async (req,res)=>{
     let users = await userModel.findOne({_id:req.params.id});
     res.render('edit');
 })
+app.post('/update/:user._id',async (req,res)=>{
+    let {name,email,image} =req.body;
+    let users = await userModel.findOneAndUpdate({_id: req.params.id},{name,image,email})
+    res.redirect('/read');
+})
 app.get('/delete/:id', async (req,res)=>{
     let users = await userModel.findOneAndDelete({_id: req.params.id});
-    res.redirect('read');
+    res.redirect('/read');
 })
 app.get('/deleteall', async (req, res) => {
     await userModel.deleteMany({});
