@@ -28,6 +28,10 @@ app.post('/create', async (req,res)=>{
     });
     res.redirect('/read');
 })
+app.get('/edit/:id',async (req,res)=>{
+    let users = await userModel.findOne({_id:req.params.id});
+    res.render('edit');
+})
 app.get('/delete/:id', async (req,res)=>{
     let users = await userModel.findOneAndDelete({_id: req.params.id});
     res.redirect('read');
