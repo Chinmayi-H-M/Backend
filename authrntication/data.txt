@@ -1,0 +1,6 @@
+user ko profile dene se pehle ye check karna hota hai ke user hai kaun - authentication
+
+sabse pehle humein kuchch cheejein saakhi hai alag alag
+i).How acn we set cookies
+ii).How bcryt can be used for password encryption and decryption 
+iii). What is jwt and data is tores in jwt and how to get the data stored in jwt
