@@ -15,7 +15,7 @@ app.use(express.static(path.join(__dirname,'public')));
 
 app.get('/', function(req,res){
     bcrypt.genSalt(saltRounds, function(err, salt) {
-    bcrypt.hash(myPlaintextPassword, salt, function(err, hash) {
+    bcrypt.hash("hello/s/", salt, function(err, hash) {
         // Store hash in your password DB.
     });
 });
