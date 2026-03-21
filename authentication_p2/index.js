@@ -14,5 +14,19 @@ app.use(cookieParser());
 app.get("/",function(req,res){
     res.render("index");
 })
+app.post("/create",async (req,res)=>{
+    let {username,email,password,age} = req.body;
+
+    bcrypt.genSalt(10,)
+
+    let createduser=await userModel.create({
+        username,
+        email,
+        password,
+        age
+    })
+
+    res.send(createduser);
+})
 
 app.listen(3000);
