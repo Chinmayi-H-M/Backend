@@ -19,5 +19,16 @@ app.get("/create",async function(req,res){
     })
     res.json(user);
 })
+app.get("/post/create",async function(req,res){
+    let post = await postModel.create({
+        postdata:"Hello world",
+        user:" "
+    })
+    let user = await userModel.findOne({_id: " "});
+    user.posts.push(post._id);
+    user.save();
+
+res.json({post,user});
+})
 
 app.listen(3000);
