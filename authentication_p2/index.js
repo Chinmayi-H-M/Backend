@@ -1,3 +1,11 @@
+const express = require('express');
+const app=express();
+const userModel = require('./models/user');
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+
+const path = require('path');
+const cookieParser = require('cookie-parser');
 
 app.set("view engine","ejs");
 app.use(express.json());
